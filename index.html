@@ -3,13 +3,35 @@
     <head>
         <meta charset="utf-8">
         <title>Notaker</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
+        <link href="style.css" rel="stylesheet">
     </head>
 
     <body>
-        <h1>Notaker- The best note taking app</h1>
-        <div id='notes' contenteditable> Add to here</div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Notaker</h4>
+                <h6 class="text-muted card-subtitle mb-2">Take instant notes</h6>
+                <ul class="list-group">
+                    <li class="list-group-item"><span>Note 1</span></li>
+                    <li class="list-group-item"><span>Note 2</span></li>
+                    <li class="list-group-item"><span>Note 3</span></li>
+                </ul>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Add new title</h4>
+                                <p id="notes" class="card-text" placeholder="Add Title" contenteditable>Take a note</p>
+                                <button class="btn btn-primary" type="button">Save</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
     <script src="https://unpkg.com/filer/dist/filer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
     <script src="notetaker.js"></script>
 </html>
