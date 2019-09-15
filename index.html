@@ -5,6 +5,7 @@
         <title>Notaker</title>
         <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"> 
         <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/ui/trumbowyg.min.css" integrity="sha256-iS3knajmo8cvwnS0yrVDpNnCboUEwZMJ6mVBEW1VcSA=" crossorigin="anonymous" />        
     </head>
 
     <body>
@@ -21,17 +22,21 @@
                     <div class="col-sm-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Add new title</h4>
-                                <p id="notes" class="card-text" placeholder="Add Title" contenteditable>Take a note</p>
-                                <button class="btn btn-primary" type="button">Save</button></div>
+                                <div class="card-title" contenteditable="">Note 4</div>
+                                <p id="notes" class="card-text" placeholder="Take a note" contenteditable></p>
+                                <button class="btn btn-info mt-2" id="save" type="button">Save note</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button class="btn btn-primary mt-2" type="button">Add new note</button>
             </div>
         </div>
     </body>
     <script src="https://unpkg.com/filer/dist/filer.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/trumbowyg.min.js" integrity="sha256-1ifXbvyVBZsVmsqwqcoow46rXHi4976VpOWpaMVu2qM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="notetaker.js"></script>
 </html>

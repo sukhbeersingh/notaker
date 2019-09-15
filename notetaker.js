@@ -1,5 +1,5 @@
 const fs = new Filer.FileSystem();
-const filePath = '/notepad/notefile'
+const filePath = '/notefile'
 const checkDirectory = () => {
     fs.stat('/notepad', (err, stats) => {
         if (err){
@@ -14,7 +14,7 @@ const checkDirectory = () => {
     })
 }
 function takeNotes(){
-    checkDirectory();
+    // checkDirectory();
     fs.readFile(filePath,'utf8',(err,data)=>{
         if (err)
             console.log('What the figgle bottle!')
@@ -22,8 +22,20 @@ function takeNotes(){
     })
 
 }
-window.setInterval(()=>{
+const saveFile = () =>{
     var data = $('#notes').text();
-    fs.writeFile(filePath,data,err=>{if(err) console.log("Couldn't write to file");})
-},5000)
+    fs.writeFile(filePath,data,err=>{
+        if(err) console.log("Couldn't write to file");
+    })
+    Swal.fire({
+        title:'Saved',
+        timer: '1500',
+        type: 'success',
+        showConfirmButton: false
+    })
+    // $('#save').text('Saved Content');
+
+}
 window.addEventListener('DOMContentLoaded',takeNotes);
+$('#notes').trumbowyg();
+$('#save').click(saveFile)
