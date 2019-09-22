@@ -34,8 +34,11 @@ const saveFile = () =>{
         showConfirmButton: false
     })
     // $('#save').text('Saved Content');
-
+}
+const clearFile = () =>{
+    $('#notes').text('');
 }
 window.addEventListener('DOMContentLoaded',takeNotes);
 $('#notes').trumbowyg();
-$('#save').click(saveFile)
+$('#save').click(saveFile);
+$('#clear').click(clearFile);
